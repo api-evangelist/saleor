@@ -1,0 +1,154 @@
+openapi: 3.1.0
+info:
+  title: Saleor GraphQL API
+  description: |
+    Saleor is an open-source, GraphQL-first commerce platform. The entire
+    commerce surface (products, channels, carts/checkout, orders, payments,
+    promotions, taxes, attributes, warehouses, users) is exposed through a
+    single GraphQL endpoint. This OpenAPI document describes the HTTP
+    transport for that endpoint; the GraphQL schema itself is the source of
+    truth for query and mutation shapes.
+  version: "2026-05-23"
+  contact:
+    name: Saleor
+    url: https://docs.saleor.io/api-reference/
+  license:
+    name: BSD-3-Clause
+    url: https://github.com/saleor/saleor/blob/main/LICENSE
+servers:
+  - url: https://{store}.saleor.cloud/graphql/
+    description: Saleor Cloud store endpoint
+    variables:
+      store:
+        default: example
+        description: Saleor Cloud store subdomain
+  - url: https://{host}/graphql/
+    description: Self-hosted Saleor instance
+    variables:
+      host:
+        default: saleor.example.com
+        description: Hostname of the self-hosted Saleor server
+security:
+  - bearerAuth: []
+  - appToken: []
+  - {}
+paths:
+  /:
+    post:
+      summary: Execute GraphQL query or mutation
+      description: |
+        Single GraphQL endpoint accepting a query or mutation as documented
+        in the Saleor API reference. The request body follows the standard
+        GraphQL-over-HTTP envelope.
+      operationId: executeGraphQL
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GraphQLRequest'
+      responses:
+        '200':
+          description: GraphQL response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GraphQLResponse'
+        '400':
+          description: Malformed request
+        '401':
+          description: Authentication required or token invalid
+    get:
+      summary: Execute GraphQL query (query string transport)
+      description: GraphQL query passed via query parameters per GraphQL-over-HTTP.
+      operationId: executeGraphQLGet
+      parameters:
+        - name: query
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: operationName
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: variables
+          in: query
+          required: false
+          schema:
+            type: string
+            description: JSON-encoded variables object
+      responses:
+        '200':
+          description: GraphQL response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GraphQLResponse'
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: User or app JWT issued by Saleor authentication mutations.
+    appToken:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: |
+        Saleor App auth token, sent as `Authorization: Bearer <token>` and
+        scoped to the installed app's permissions.
+  schemas:
+    GraphQLRequest:
+      type: object
+      required:
+        - query
+      properties:
+        query:
+          type: string
+          description: GraphQL document containing a query or mutation.
+        operationName:
+          type: string
+          nullable: true
+        variables:
+          type: object
+          additionalProperties: true
+          nullable: true
+        extensions:
+          type: object
+          additionalProperties: true
+          nullable: true
+    GraphQLResponse:
+      type: object
+      properties:
+        data:
+          type: object
+          additionalProperties: true
+          nullable: true
+        errors:
+          type: array
+          items:
+            type: object
+            properties:
+              message:
+                type: string
+              path:
+                type: array
+                items: {}
+              locations:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    line:
+                      type: integer
+                    column:
+                      type: integer
+              extensions:
+                type: object
+                additionalProperties: true
+        extensions:
+          type: object
+          additionalProperties: true
