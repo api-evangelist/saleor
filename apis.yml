@@ -168,6 +168,8 @@ common:
     url: https://status.saleor.io/
   - type: LinkedIn
     url: https://www.linkedin.com/company/saleor-commerce/
+  - type: LLMsTxt
+    url: https://docs.saleor.io/llms.txt
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
