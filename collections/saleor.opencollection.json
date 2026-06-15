@@ -1,0 +1,59 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Saleor GraphQL API",
+    "version": "2026-05-23"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Execute GraphQL query (query string transport)",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{store}.saleor.cloud/graphql/",
+        "params": [
+          {
+            "name": "query",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "operationName",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "variables",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "GraphQL query passed via query parameters per GraphQL-over-HTTP."
+    },
+    {
+      "info": {
+        "name": "Execute GraphQL query or mutation",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://{store}.saleor.cloud/graphql/",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Single GraphQL endpoint accepting a query or mutation as documented\nin the Saleor API reference. The request body follows the standard\nGraphQL-over-HTTP envelope.\n"
+    }
+  ],
+  "bundled": true
+}

@@ -13,169 +13,171 @@ description: >-
   an App Store of first-party and partner integrations.
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Commerce
-  - Headless
-  - eCommerce
-  - GraphQL
-  - Open Source
-  - Python
-  - TypeScript
+- Commerce
+- Headless
+- eCommerce
+- GraphQL
+- Open Source
+- Python
+- TypeScript
 created: '2026-05-23'
 modified: '2026-05-25'
 specificationVersion: '0.19'
 apis:
-  - aid: saleor:graphql-api
-    name: Saleor GraphQL API
-    description: >-
-      Single GraphQL endpoint exposing the entire Saleor commerce model -
-      products, variants, categories, collections, channels, checkout, orders,
-      payments, promotions, taxes, attributes, warehouses, and users. Used by
-      storefronts, the Saleor Dashboard, and installed Apps. Cloud instances
-      expose this endpoint at /graphql/ on the API host for the store.
-    humanURL: https://docs.saleor.io/api-reference/
-    baseURL: https://docs.saleor.io/api-reference/
-    tags:
-      - GraphQL
-      - Commerce
-      - Storefront
-      - Admin
-    properties:
-      - type: Documentation
-        url: https://docs.saleor.io/api-reference/
-      - type: API Usage
-        url: https://docs.saleor.io/api-usage/overview
-  - aid: saleor:app-sdk
-    name: Saleor App SDK
-    description: >-
-      TypeScript SDK for building Saleor Apps - background services that extend
-      Saleor over the GraphQL API and react to webhooks. Handles app
-      installation, auth, async webhooks, and metadata.
-    humanURL: https://github.com/saleor/saleor-app-sdk
-    baseURL: https://github.com/saleor/saleor-app-sdk
-    tags:
-      - SDK
-      - TypeScript
-      - Apps
-      - Webhooks
-    properties:
-      - type: Repository
-        url: https://github.com/saleor/saleor-app-sdk
-  - aid: saleor:app-template
-    name: Saleor App Template
-    description: >-
-      Reference Next.js project for bootstrapping a Saleor App - install flow,
-      webhook handlers, GraphQL clients, and a config UI mounted inside the
-      Saleor Dashboard via the App Bridge.
-    humanURL: https://github.com/saleor/saleor-app-template
-    baseURL: https://github.com/saleor/saleor-app-template
-    tags:
-      - Starter
-      - Apps
-      - Next.js
-    properties:
-      - type: Repository
-        url: https://github.com/saleor/saleor-app-template
-  - aid: saleor:sdk-js
-    name: saleor-sdk (TypeScript / JavaScript)
-    description: >-
-      Official TypeScript / JavaScript SDK wrapping the Saleor GraphQL API for
-      storefronts and Apps - typed operations, auth, cart, and checkout
-      helpers.
-    humanURL: https://github.com/saleor/saleor-sdk
-    baseURL: https://github.com/saleor/saleor-sdk
-    tags:
-      - SDK
-      - JavaScript
-      - TypeScript
-      - Storefront
-    properties:
-      - type: Repository
-        url: https://github.com/saleor/saleor-sdk
-  - aid: saleor:storefront
-    name: Saleor Storefront (Next.js Starter)
-    description: >-
-      Reference Next.js storefront talking to the Saleor GraphQL API - product
-      browse, cart, checkout, account, and payments. Used as the canonical
-      starting point for headless storefronts on Saleor.
-    humanURL: https://github.com/saleor/storefront
-    baseURL: https://github.com/saleor/storefront
-    tags:
-      - Storefront
-      - Next.js
-      - Starter
-    properties:
-      - type: Repository
-        url: https://github.com/saleor/storefront
-  - aid: saleor:dashboard
-    name: Saleor Dashboard
-    description: >-
-      Official React / TypeScript admin dashboard for Saleor - a thick client
-      built entirely against the Saleor GraphQL API.
-    humanURL: https://github.com/saleor/saleor-dashboard
-    baseURL: https://github.com/saleor/saleor-dashboard
-    tags:
-      - Dashboard
-      - Admin
-      - React
-    properties:
-      - type: Repository
-        url: https://github.com/saleor/saleor-dashboard
-  - aid: saleor:cloud
-    name: Saleor Cloud
-    description: >-
-      Hosted, managed Saleor service - provisions Saleor cores per store with
-      the same GraphQL API surface, plus environment management, deploys, and
-      Apps marketplace.
-    humanURL: https://cloud.saleor.io/
-    baseURL: https://cloud.saleor.io/
-    tags:
-      - Cloud
-      - Hosted
-      - SaaS
-    properties:
-      - type: Application
-        url: https://cloud.saleor.io/
-  - aid: saleor:core-repo
-    name: Saleor Core (Server) Repository
-    description: >-
-      Source repository for the Saleor server - the Django / Python backend
-      that implements the GraphQL API, business logic, persistence, and
-      webhooks.
-    humanURL: https://github.com/saleor/saleor
-    baseURL: https://github.com/saleor/saleor
-    tags:
-      - Open Source
-      - Server
-      - Python
-      - Django
-    properties:
-      - type: Repository
-        url: https://github.com/saleor/saleor
-common:
-  - type: Website
-    url: https://saleor.io/
+- aid: saleor:graphql-api
+  name: Saleor GraphQL API
+  description: >-
+    Single GraphQL endpoint exposing the entire Saleor commerce model -
+    products, variants, categories, collections, channels, checkout, orders,
+    payments, promotions, taxes, attributes, warehouses, and users. Used by
+    storefronts, the Saleor Dashboard, and installed Apps. Cloud instances
+    expose this endpoint at /graphql/ on the API host for the store.
+  humanURL: https://docs.saleor.io/api-reference/
+  baseURL: https://docs.saleor.io/api-reference/
+  tags:
+  - GraphQL
+  - Commerce
+  - Storefront
+  - Admin
+  properties:
   - type: Documentation
-    url: https://docs.saleor.io/
-  - type: API Reference
     url: https://docs.saleor.io/api-reference/
-  - type: GitHub
-    url: https://github.com/saleor
-  - type: Cloud
+  - type: API Usage
+    url: https://docs.saleor.io/api-usage/overview
+  - url: graphql/saleor-graphql.md
+    type: GraphQL
+- aid: saleor:app-sdk
+  name: Saleor App SDK
+  description: >-
+    TypeScript SDK for building Saleor Apps - background services that extend
+    Saleor over the GraphQL API and react to webhooks. Handles app
+    installation, auth, async webhooks, and metadata.
+  humanURL: https://github.com/saleor/saleor-app-sdk
+  baseURL: https://github.com/saleor/saleor-app-sdk
+  tags:
+  - SDK
+  - TypeScript
+  - Apps
+  - Webhooks
+  properties:
+  - type: Repository
+    url: https://github.com/saleor/saleor-app-sdk
+- aid: saleor:app-template
+  name: Saleor App Template
+  description: >-
+    Reference Next.js project for bootstrapping a Saleor App - install flow,
+    webhook handlers, GraphQL clients, and a config UI mounted inside the
+    Saleor Dashboard via the App Bridge.
+  humanURL: https://github.com/saleor/saleor-app-template
+  baseURL: https://github.com/saleor/saleor-app-template
+  tags:
+  - Starter
+  - Apps
+  - Next.js
+  properties:
+  - type: Repository
+    url: https://github.com/saleor/saleor-app-template
+- aid: saleor:sdk-js
+  name: saleor-sdk (TypeScript / JavaScript)
+  description: >-
+    Official TypeScript / JavaScript SDK wrapping the Saleor GraphQL API for
+    storefronts and Apps - typed operations, auth, cart, and checkout
+    helpers.
+  humanURL: https://github.com/saleor/saleor-sdk
+  baseURL: https://github.com/saleor/saleor-sdk
+  tags:
+  - SDK
+  - JavaScript
+  - TypeScript
+  - Storefront
+  properties:
+  - type: Repository
+    url: https://github.com/saleor/saleor-sdk
+- aid: saleor:storefront
+  name: Saleor Storefront (Next.js Starter)
+  description: >-
+    Reference Next.js storefront talking to the Saleor GraphQL API - product
+    browse, cart, checkout, account, and payments. Used as the canonical
+    starting point for headless storefronts on Saleor.
+  humanURL: https://github.com/saleor/storefront
+  baseURL: https://github.com/saleor/storefront
+  tags:
+  - Storefront
+  - Next.js
+  - Starter
+  properties:
+  - type: Repository
+    url: https://github.com/saleor/storefront
+- aid: saleor:dashboard
+  name: Saleor Dashboard
+  description: >-
+    Official React / TypeScript admin dashboard for Saleor - a thick client
+    built entirely against the Saleor GraphQL API.
+  humanURL: https://github.com/saleor/saleor-dashboard
+  baseURL: https://github.com/saleor/saleor-dashboard
+  tags:
+  - Dashboard
+  - Admin
+  - React
+  properties:
+  - type: Repository
+    url: https://github.com/saleor/saleor-dashboard
+- aid: saleor:cloud
+  name: Saleor Cloud
+  description: >-
+    Hosted, managed Saleor service - provisions Saleor cores per store with
+    the same GraphQL API surface, plus environment management, deploys, and
+    Apps marketplace.
+  humanURL: https://cloud.saleor.io/
+  baseURL: https://cloud.saleor.io/
+  tags:
+  - Cloud
+  - Hosted
+  - SaaS
+  properties:
+  - type: Application
     url: https://cloud.saleor.io/
-  - type: Discord
-    url: https://saleor.io/discord
-  - type: Status
-    url: https://status.saleor.io/
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/saleor-commerce/
-  - type: LLMsTxt
-    url: https://docs.saleor.io/llms.txt
+- aid: saleor:core-repo
+  name: Saleor Core (Server) Repository
+  description: >-
+    Source repository for the Saleor server - the Django / Python backend
+    that implements the GraphQL API, business logic, persistence, and
+    webhooks.
+  humanURL: https://github.com/saleor/saleor
+  baseURL: https://github.com/saleor/saleor
+  tags:
+  - Open Source
+  - Server
+  - Python
+  - Django
+  properties:
+  - type: Repository
+    url: https://github.com/saleor/saleor
+common:
+- type: Website
+  url: https://saleor.io/
+- type: Documentation
+  url: https://docs.saleor.io/
+- type: API Reference
+  url: https://docs.saleor.io/api-reference/
+- type: GitHub
+  url: https://github.com/saleor
+- type: Cloud
+  url: https://cloud.saleor.io/
+- type: Discord
+  url: https://saleor.io/discord
+- type: Status
+  url: https://status.saleor.io/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/saleor-commerce/
+- type: LLMsTxt
+  url: https://docs.saleor.io/llms.txt
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
 x-references:
-  - name: Anthropic
-    url: https://www.anthropic.com/
-    description: >-
-      Profiled with assistance from Anthropic's Claude under the API Evangelist
-      research pipeline.
+- name: Anthropic
+  url: https://www.anthropic.com/
+  description: >-
+    Profiled with assistance from Anthropic's Claude under the API Evangelist
+    research pipeline.
