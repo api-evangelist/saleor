@@ -154,6 +154,10 @@ apis:
   - type: Repository
     url: https://github.com/saleor/saleor
 common:
+- type: DomainSecurity
+  url: security/saleor-domain-security.yml
+- type: Authentication
+  url: authentication/saleor-authentication.yml
 - type: Website
   url: https://saleor.io/
 - type: Documentation
@@ -172,6 +176,8 @@ common:
   url: https://www.linkedin.com/company/saleor-commerce/
 - type: LlmsText
   url: https://docs.saleor.io/llms.txt
+- url: https://saleor.io/blog
+  type: Blog
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
