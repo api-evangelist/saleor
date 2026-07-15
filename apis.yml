@@ -154,6 +154,8 @@ apis:
   - type: Repository
     url: https://github.com/saleor/saleor
 common:
+- type: AgenticAccess
+  url: agentic-access/saleor-agentic-access.yml
 - type: DomainSecurity
   url: security/saleor-domain-security.yml
 - type: Authentication
