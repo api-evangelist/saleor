@@ -11,7 +11,20 @@ description: >-
   warehouses. Developer surface includes Saleor Cloud, the Saleor App SDK and
   App Template, a starter storefront, language SDKs (saleor-sdk for TS/JS), and
   an App Store of first-party and partner integrations.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: free
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Free · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/saleor.png
 tags:
 - Commerce
 - Headless
@@ -27,11 +40,10 @@ apis:
 - aid: saleor:graphql-api
   name: Saleor GraphQL API
   description: >-
-    Single GraphQL endpoint exposing the entire Saleor commerce model -
-    products, variants, categories, collections, channels, checkout, orders,
-    payments, promotions, taxes, attributes, warehouses, and users. Used by
-    storefronts, the Saleor Dashboard, and installed Apps. Cloud instances
-    expose this endpoint at /graphql/ on the API host for the store.
+    Single GraphQL endpoint exposing the entire Saleor commerce model - products, variants, categories,
+    collections, channels, checkout, orders, payments, promotions, taxes, attributes, warehouses, and
+    users. Used by storefronts, the Saleor Dashboard, and installed Apps. Cloud instances expose this
+    endpoint at /graphql/ on the API host for the store.
   humanURL: https://docs.saleor.io/api-reference/
   baseURL: https://docs.saleor.io/api-reference/
   tags:
@@ -49,9 +61,8 @@ apis:
 - aid: saleor:app-sdk
   name: Saleor App SDK
   description: >-
-    TypeScript SDK for building Saleor Apps - background services that extend
-    Saleor over the GraphQL API and react to webhooks. Handles app
-    installation, auth, async webhooks, and metadata.
+    TypeScript SDK for building Saleor Apps - background services that extend Saleor over the GraphQL
+    API and react to webhooks. Handles app installation, auth, async webhooks, and metadata.
   humanURL: https://github.com/saleor/saleor-app-sdk
   baseURL: https://github.com/saleor/saleor-app-sdk
   tags:
@@ -65,9 +76,8 @@ apis:
 - aid: saleor:app-template
   name: Saleor App Template
   description: >-
-    Reference Next.js project for bootstrapping a Saleor App - install flow,
-    webhook handlers, GraphQL clients, and a config UI mounted inside the
-    Saleor Dashboard via the App Bridge.
+    Reference Next.js project for bootstrapping a Saleor App - install flow, webhook handlers, GraphQL
+    clients, and a config UI mounted inside the Saleor Dashboard via the App Bridge.
   humanURL: https://github.com/saleor/saleor-app-template
   baseURL: https://github.com/saleor/saleor-app-template
   tags:
@@ -80,9 +90,8 @@ apis:
 - aid: saleor:sdk-js
   name: saleor-sdk (TypeScript / JavaScript)
   description: >-
-    Official TypeScript / JavaScript SDK wrapping the Saleor GraphQL API for
-    storefronts and Apps - typed operations, auth, cart, and checkout
-    helpers.
+    Official TypeScript / JavaScript SDK wrapping the Saleor GraphQL API for storefronts and Apps - typed
+    operations, auth, cart, and checkout helpers.
   humanURL: https://github.com/saleor/saleor-sdk
   baseURL: https://github.com/saleor/saleor-sdk
   tags:
@@ -96,9 +105,8 @@ apis:
 - aid: saleor:storefront
   name: Saleor Storefront (Next.js Starter)
   description: >-
-    Reference Next.js storefront talking to the Saleor GraphQL API - product
-    browse, cart, checkout, account, and payments. Used as the canonical
-    starting point for headless storefronts on Saleor.
+    Reference Next.js storefront talking to the Saleor GraphQL API - product browse, cart, checkout, account,
+    and payments. Used as the canonical starting point for headless storefronts on Saleor.
   humanURL: https://github.com/saleor/storefront
   baseURL: https://github.com/saleor/storefront
   tags:
@@ -111,8 +119,8 @@ apis:
 - aid: saleor:dashboard
   name: Saleor Dashboard
   description: >-
-    Official React / TypeScript admin dashboard for Saleor - a thick client
-    built entirely against the Saleor GraphQL API.
+    Official React / TypeScript admin dashboard for Saleor - a thick client built entirely against the
+    Saleor GraphQL API.
   humanURL: https://github.com/saleor/saleor-dashboard
   baseURL: https://github.com/saleor/saleor-dashboard
   tags:
@@ -125,9 +133,8 @@ apis:
 - aid: saleor:cloud
   name: Saleor Cloud
   description: >-
-    Hosted, managed Saleor service - provisions Saleor cores per store with
-    the same GraphQL API surface, plus environment management, deploys, and
-    Apps marketplace.
+    Hosted, managed Saleor service - provisions Saleor cores per store with the same GraphQL API surface,
+    plus environment management, deploys, and Apps marketplace.
   humanURL: https://cloud.saleor.io/
   baseURL: https://cloud.saleor.io/
   tags:
@@ -140,9 +147,8 @@ apis:
 - aid: saleor:core-repo
   name: Saleor Core (Server) Repository
   description: >-
-    Source repository for the Saleor server - the Django / Python backend
-    that implements the GraphQL API, business logic, persistence, and
-    webhooks.
+    Source repository for the Saleor server - the Django / Python backend that implements the GraphQL
+    API, business logic, persistence, and webhooks.
   humanURL: https://github.com/saleor/saleor
   baseURL: https://github.com/saleor/saleor
   tags:
@@ -153,6 +159,16 @@ apis:
   properties:
   - type: Repository
     url: https://github.com/saleor/saleor
+- aid: saleor:saleor-saleor-graphql-api-api
+  name: Saleor Saleor GraphQL API API
+  description: The Saleor GraphQL API API from Saleor — 1 operation(s) for saleor graphql api.
+  humanURL: https://docs.saleor.io/api-reference/
+  baseURL: https://docs.saleor.io/api-reference/
+  tags:
+  - Saleor GraphQL API
+  properties:
+  - type: OpenAPI
+    url: openapi/saleor-saleor-graphql-api-api-openapi.yml
 common:
 - type: AgenticAccess
   url: agentic-access/saleor-agentic-access.yml
