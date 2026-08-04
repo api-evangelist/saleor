@@ -1,0 +1,14 @@
+{
+  "provider": "saleor",
+  "sources": [
+    "saleor-saleor-graphql-api-api-openapi.yml"
+  ],
+  "outputs": [
+    "saleor-saleor-graphql-api-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
