@@ -170,6 +170,9 @@ apis:
   - type: OpenAPI
     url: openapi/saleor-saleor-graphql-api-api-openapi.yml
 common:
+- type: License
+  name: BSD-3-Clause
+  url: https://github.com/saleor/saleor-app-sdk/blob/main/LICENSE
 - type: AgenticAccess
   url: agentic-access/saleor-agentic-access.yml
 - type: DomainSecurity
