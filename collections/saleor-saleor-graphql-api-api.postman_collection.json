@@ -1,0 +1,393 @@
+{
+  "item": [
+    {
+      "id": "48be9242-06c8-40cf-b3bc-11136d1edad9",
+      "name": "Saleor GraphQL API",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "257535cf-d32a-4ff5-b510-66ca56b436b7",
+          "name": "Execute GraphQL query or mutation",
+          "request": {
+            "name": "Execute GraphQL query or mutation",
+            "description": {
+              "content": "Single GraphQL endpoint accepting a query or mutation as documented\nin the Saleor API reference. The request body follows the standard\nGraphQL-over-HTTP envelope.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Saleor Cloud store subdomain",
+                  "type": "any",
+                  "value": "{{store}}",
+                  "key": "store"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"query\": \"<string>\",\n  \"operationName\": \"<string>\",\n  \"variables\": {\n    \"key_0\": 7329\n  },\n  \"extensions\": {\n    \"key_0\": 9258.403470499172,\n    \"key_1\": 5700.325595548869,\n    \"key_2\": false\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "de45a79b-833c-4856-bd85-a181c25e80d5",
+              "name": "GraphQL response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Saleor Cloud store subdomain",
+                      "type": "any",
+                      "value": "{{store}}",
+                      "key": "store"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"query\": \"<string>\",\n  \"operationName\": \"<string>\",\n  \"variables\": {\n    \"key_0\": 6462,\n    \"key_1\": 8371\n  },\n  \"extensions\": {\n    \"key_0\": 8289.22698462343,\n    \"key_1\": true\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"key_0\": 7009.005500224112,\n    \"key_1\": \"string\",\n    \"key_2\": 4781,\n    \"key_3\": 2979.6707356440156\n  },\n  \"errors\": [\n    {\n      \"message\": \"string\",\n      \"locations\": [\n        {\n          \"line\": 7363,\n          \"column\": 1962\n        },\n        {\n          \"line\": 8400,\n          \"column\": 7244\n        }\n      ],\n      \"extensions\": {\n        \"key_0\": 4347,\n        \"key_1\": 2910\n      }\n    },\n    {\n      \"message\": \"string\",\n      \"locations\": [\n        {\n          \"line\": 1472,\n          \"column\": 8148\n        },\n        {\n          \"line\": 8420,\n          \"column\": 8944\n        }\n      ],\n      \"extensions\": {\n        \"key_0\": 5912,\n        \"key_1\": false\n      }\n    }\n  ],\n  \"extensions\": {\n    \"key_0\": false,\n    \"key_1\": true,\n    \"key_2\": true,\n    \"key_3\": 5540.691147510947,\n    \"key_4\": false\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "414eddb0-a45a-490d-8152-a1ea90dcc90b",
+              "name": "Malformed request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Saleor Cloud store subdomain",
+                      "type": "any",
+                      "value": "{{store}}",
+                      "key": "store"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"query\": \"<string>\",\n  \"operationName\": \"<string>\",\n  \"variables\": {\n    \"key_0\": 6462,\n    \"key_1\": 8371\n  },\n  \"extensions\": {\n    \"key_0\": 8289.22698462343,\n    \"key_1\": true\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "491b273a-107b-40ee-aaa7-81e610366e7c",
+              "name": "Authentication required or token invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Saleor Cloud store subdomain",
+                      "type": "any",
+                      "value": "{{store}}",
+                      "key": "store"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"query\": \"<string>\",\n  \"operationName\": \"<string>\",\n  \"variables\": {\n    \"key_0\": 6462,\n    \"key_1\": 8371\n  },\n  \"extensions\": {\n    \"key_0\": 8289.22698462343,\n    \"key_1\": true\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5e01d1e8-a7fd-4bd0-aa5e-ae3a6cea908b",
+          "name": "Execute GraphQL query (query string transport)",
+          "request": {
+            "name": "Execute GraphQL query (query string transport)",
+            "description": {
+              "content": "GraphQL query passed via query parameters per GraphQL-over-HTTP.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "query",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "operationName",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "variables",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "description": "Saleor Cloud store subdomain",
+                  "type": "any",
+                  "value": "{{store}}",
+                  "key": "store"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0e3a13eb-eb97-4eff-b96d-31f989936327",
+              "name": "GraphQL response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "query",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "operationName",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "variables",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "Saleor Cloud store subdomain",
+                      "type": "any",
+                      "value": "{{store}}",
+                      "key": "store"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"key_0\": 7009.005500224112,\n    \"key_1\": \"string\",\n    \"key_2\": 4781,\n    \"key_3\": 2979.6707356440156\n  },\n  \"errors\": [\n    {\n      \"message\": \"string\",\n      \"locations\": [\n        {\n          \"line\": 7363,\n          \"column\": 1962\n        },\n        {\n          \"line\": 8400,\n          \"column\": 7244\n        }\n      ],\n      \"extensions\": {\n        \"key_0\": 4347,\n        \"key_1\": 2910\n      }\n    },\n    {\n      \"message\": \"string\",\n      \"locations\": [\n        {\n          \"line\": 1472,\n          \"column\": 8148\n        },\n        {\n          \"line\": 8420,\n          \"column\": 8944\n        }\n      ],\n      \"extensions\": {\n        \"key_0\": 5912,\n        \"key_1\": false\n      }\n    }\n  ],\n  \"extensions\": {\n    \"key_0\": false,\n    \"key_1\": true,\n    \"key_2\": true,\n    \"key_3\": 5540.691147510947,\n    \"key_4\": false\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "Saleor Cloud store subdomain",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "example",
+      "key": "store"
+    },
+    {
+      "type": "string",
+      "value": "https://{{store}}.saleor.cloud/graphql/",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "ac950035-41ee-4bc7-8ba9-3c98fbedddaf",
+    "name": "Saleor GraphQL Saleor GraphQL API API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Saleor is an open-source, GraphQL-first commerce platform. The entire\ncommerce surface (products, channels, carts/checkout, orders, payments,\npromotions, taxes, attributes, warehouses, users) is exposed through a\nsingle GraphQL endpoint. This OpenAPI document describes the HTTP\ntransport for that endpoint; the GraphQL schema itself is the source of\ntruth for query and mutation shapes.\n\n\nContact Support:\n Name: Saleor",
+      "type": "text/plain"
+    }
+  }
+}
