@@ -28,6 +28,14 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/saleor.png
 tags:
 - Commerce
 - Headless
+- E-Commerce
+- GraphQL
+- Open-Source
+- Python
+- TypeScript
+tags_raw:
+- Commerce
+- Headless
 - eCommerce
 - GraphQL
 - Open Source
@@ -68,6 +76,11 @@ apis:
   tags:
   - SDK
   - TypeScript
+  - Application
+  - Webhook
+  tags_raw:
+  - SDK
+  - TypeScript
   - Apps
   - Webhooks
   properties:
@@ -81,6 +94,10 @@ apis:
   humanURL: https://github.com/saleor/saleor-app-template
   baseURL: https://github.com/saleor/saleor-app-template
   tags:
+  - Starter
+  - Application
+  - Next.js
+  tags_raw:
   - Starter
   - Apps
   - Next.js
@@ -140,6 +157,10 @@ apis:
   tags:
   - Cloud
   - Hosted
+  - Software-as-a-Service
+  tags_raw:
+  - Cloud
+  - Hosted
   - SaaS
   properties:
   - type: Application
@@ -152,6 +173,11 @@ apis:
   humanURL: https://github.com/saleor/saleor
   baseURL: https://github.com/saleor/saleor
   tags:
+  - Open-Source
+  - Server
+  - Python
+  - Django
+  tags_raw:
   - Open Source
   - Server
   - Python
