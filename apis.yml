@@ -11,6 +11,19 @@ description: >-
   warehouses. Developer surface includes Saleor Cloud, the Saleor App SDK and
   App Template, a starter storefront, language SDKs (saleor-sdk for TS/JS), and
   an App Store of first-party and partner integrations.
+deliveryModel:
+  model: self-hosted
+  license: BSD-3-Clause
+  open_source: true
+  commercial: false
+  callable_host: true
+  label: Self-hosted open source · you run it yourself
+  confidence: high
+  source:
+  - license
+  - openapi
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: free
   onboarding: self-serve
@@ -196,6 +209,12 @@ apis:
   - type: OpenAPI
     url: openapi/saleor-saleor-graphql-api-api-openapi.yml
 common:
+- type: IssueTracker
+  url: https://github.com/saleor/saleor-app-sdk/issues
+- type: Releases
+  url: https://github.com/saleor/saleor-app-sdk/releases
+- type: CodeOfConduct
+  url: https://github.com/saleor/.github/blob/main/CODE_OF_CONDUCT.md
 - type: License
   name: BSD-3-Clause
   url: https://github.com/saleor/saleor-app-sdk/blob/main/LICENSE
