@@ -147,6 +147,10 @@ apis:
   humanURL: https://github.com/saleor/saleor-dashboard
   baseURL: https://github.com/saleor/saleor-dashboard
   tags:
+  - Dashboards
+  - Admin
+  - React
+  tags_raw:
   - Dashboard
   - Admin
   - React
@@ -178,7 +182,7 @@ apis:
   baseURL: https://github.com/saleor/saleor
   tags:
   - Open-Source
-  - Server
+  - Servers
   - Python
   - Django
   tags_raw:
