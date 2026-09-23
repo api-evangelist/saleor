@@ -1,7 +1,7 @@
 {
   "provider": "saleor",
   "sources": [
-    "saleor-saleor-graphql-api-api-openapi.yml"
+    "_original/saleor-openapi.yml"
   ],
   "outputs": [
     "saleor-saleor-graphql-api-api-openapi.yml"
@@ -9,6 +9,15 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "saleor-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "saleor-openapi.yml: tagged paths POST / -> Saleor GraphQL API",
+    "saleor-openapi.yml: tagged paths GET / -> Saleor GraphQL API",
+    "saleor-openapi.yml: declared missing tag: Saleor GraphQL API",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "saleor-saleor-graphql-api-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
