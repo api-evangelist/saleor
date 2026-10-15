@@ -1,16 +1,33 @@
 generated: '2026-10-12'
-method: none
+method: searched
 source:
 - https://zapier.com/apps/saleor/integrations
 - https://n8n.io/integrations/saleor/
 - https://composio.dev/toolkits/saleor
 - https://monid.ai/tools/saleor
 checked:
+- contentful/integrations/contentful-integration-edges.yml
 - https://composio.dev/toolkits/saleor
 - https://monid.ai/tools/saleor
 - https://n8n.io/integrations/saleor/
 - https://zapier.com/apps/saleor/integrations
 summary: null
 marketplace_apps: []
-edges: []
+edges:
+- partner_name: Contentful (own)
+  partner: contentful
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://www.contentful.com/marketplace/saleor-commerce/
+  mirror_of: contentful/integrations/contentful-integration-edges.yml
+  apps:
+  - Saleor Commerce
+  listing_count: 1
+  detected: '2026-10-15'
+  detected_by: mirror-platform-listings.py
 templates: []
