@@ -50,3 +50,71 @@ tool_quality:
   scored: false
   note: Facts from the saved tools/list capture (mcp_tool_quality.py); recorded, not scored. Checks learned
     from Glimind's agent-readiness audit.
+tools:
+- name: channels
+  description: 'Fetch the list of channels from Saleor.
+
+
+    This tools retrieves the list of channels. For each channel it returns information
+
+    such as: ID, name, slug, currency code, default country, whether the channel is
+
+    active, and the list of warehouses.'
+- name: customers
+  description: 'Fetch list of customers from Saleor GraphQL API.
+
+
+    This tool retrieves customer information such as: ID, active status, language code,
+
+    last login, date joined, and default shipping/billing address country.'
+- name: orders
+  description: 'Fetch list of orders from Saleor GraphQL API.
+
+
+    This tool retrieves the list of orders. For each order it returns information such
+
+    as: ID, number, status, creation date, last update date, payment status, total
+
+    amount, shipping and billing address country, order lines which include:
+
+    quantity, product SKU, variant name, product ID, product name, unit price.'
+- name: order_count
+  description: 'Fetch total count of orders from Saleor GraphQL API.
+
+
+    This tool retrieves the total count of orders based on the provided filter criteria.'
+- name: products
+  description: 'Fetch list of products from Saleor GraphQL API.
+
+
+    This tool retrieves product information such as: ID, name, slug, external reference,
+
+    product type, category, date of creation, date of last update, and pricing.
+
+
+    Products are channel-aware, meaning that their availability and pricing can vary
+
+    based on the specified channel. If a channel is provided, the tool will fetch
+
+    product data specific to that channel. Otherwise, it will return general product
+
+    data.'
+- name: stocks
+  description: 'Fetch list of stocks from Saleor GraphQL API.
+
+
+    This tool retrieves stock information such as: ID, quantity, allocated quantity,
+
+    warehouse information, and associated product variant details.'
+- name: warehouse_details
+  description: 'Fetch warehouse details from Saleor GraphQL API.
+
+
+    This tool retrieves detailed warehouse information including: ID, name, slug,
+
+    address details, click and collect options, associated shipping zones with
+
+    their channels and countries, and metadata.'
+- name: current_domain
+  description: Return the current domain of the connected Saleor instance.
+tools_count: 8
